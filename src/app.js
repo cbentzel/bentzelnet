@@ -20,12 +20,15 @@ const express = require('express');
 
 const app = express();
 
+// Serve static files from express.static
+app.use('/static', express.static('static'));
+
 app.get('/', (req, res) => {
   res.status(200).send('Hello, world!').end();
 });
 
 // Start the server
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8120;
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
   console.log('Press Ctrl+C to quit.');
