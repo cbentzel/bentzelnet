@@ -1,0 +1,8 @@
+webtest.bentzel.net uses a single appengine instance.
+
+I have also mapped custom domains webtest.bentzel.net and
+frame.webtest.bentzel.net using instructions specified at
+https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains
+
+This means that certs are also provisioned using letsencrypt and I
+have to do nothing.
