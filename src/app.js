@@ -38,7 +38,6 @@ for (var i = 0; i < dlTests.length; ++i) {
   var dlTest = dlTests[i];
   dlTest.url = dlTest.url.replace("EXTORIGIN", EXTORIGIN);
 }
-
 app.get('/dltest', function (req, res) {
   res.render('dltest', {dlTests: dlTests});
 });
