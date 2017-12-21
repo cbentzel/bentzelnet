@@ -1,5 +1,33 @@
 html
   head
-    title= "dltest"
+    title Sandboxed Download Tests
   body
-    h1= "Hello"
+    p This page contains a series of manual tests for sandboxed iframes and downloads inside them.
+    table(id='testTable')
+      thead
+        tr
+          th test
+          th expectation
+          th button
+      tbody
+        each dlTest, index in dlTests
+          tr
+            td #{dlTest.desc}
+            td #{dlTest.expect}
+            td
+              button(
+                type='button'
+                class='testButton'
+                id='but'+index
+                destUrl=dlTest.url
+              )
+    for dlTest, index in dlTests
+      if dlTest.sandbox
+        if dlTest.allow
+          iframe(id='if'+index, sandbox="allow-downloads" width=0 height=0)
+        else
+          iframe(id='if'+index, sandbox="" width=0 height=0)
+      else
+        iframe(id='if'+index width=0 height=0)
+    script(src='static/dltest.js')
+

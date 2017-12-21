@@ -17,14 +17,30 @@
 
 // [START app]
 const express = require('express');
-
 const app = express();
 
 // Serve static files from express.static
 app.use('/static', express.static('static'));
 
+// Use pug as the template engine.
+app.set('view engine', 'pug');
+app.set('views', './views');
+
+// Default route
 app.get('/', (req, res) => {
   res.status(200).send('Hello, world!').end();
+});
+
+// Download tests
+const EXTORIGIN = process.env.EXTORIGIN || 'https://frame.webtest.bentzel.net';
+var dlTests = require('./resources/dltest.json');
+for (var i = 0; i < dlTests.length; ++i) {
+  var dlTest = dlTests[i];
+  dlTest.url = dlTest.url.replace("EXTORIGIN", EXTORIGIN);
+}
+
+app.get('/dltest', function (req, res) {
+  res.render('dltest', {dlTests: dlTests});
 });
 
 // Start the server

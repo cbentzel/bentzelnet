@@ -22,7 +22,8 @@
     "e2e-test": "samples test deploy"
   },
   "dependencies": {
-    "express": "4.15.4"
+    "express": "4.15.4",
+    "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "1.4.17"
