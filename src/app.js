@@ -17,10 +17,18 @@
 
 // [START app]
 const express = require('express');
+const path = require('path');
 const app = express();
 
-// Serve static files from express.static
-app.use('/static', express.static('static'));
+// Serve static files
+// It's a little tricky as we want to specify HTTP headers as well.
+var serveStatic = require('serve-static');
+app.use('/static', serveStatic(path.join(__dirname, 'static')));
+app.use('/staticcsp', serveStatic(path.join(__dirname, 'static'), {
+  setHeaders: function (res, path, stat) {
+    res.setHeader('Content-Security-Policy', 'sandbox');
+  }
+}));
 
 // Use pug as the template engine.
 app.set('view engine', 'pug');
