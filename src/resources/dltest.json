@@ -1,0 +1,5 @@
+[{"desc": "a", "expect": "pass", "url": "EXTORIGIN/static/foo.html", "sandbox": true, "allow": false},
+ {"desc": "b", "expect": "pass", "url": "http://www.boston.com", "sandbox": true, "allow": true},
+ {"desc": "c", "expect": "pass", "url": "http://www.ign.com", "sandbox": true, "allow": false},
+ {"desc": "d", "expect": "pass", "url": "http://www.patriotledger.com", "sandbox": false, "allow": false},
+ {"desc": "e", "expect": "pass", "url": "http://www.bluesnews.com", "sandbox": true, "allow": true}]
