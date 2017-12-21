@@ -3,17 +3,20 @@ html
     title Sandboxed Download Tests
   body
     p This page contains a series of manual tests for sandboxed iframes and downloads inside them.
+    p Testing has only been done on Chrome 65.0.3299.0 and later. Specify --enable-blink-features=BlockingDownloadsInSandbox at the command line.
+    p
+    
     table(id='testTable')
       thead
         tr
-          th test
-          th expectation
-          th button
+          th description
+          th downloads
+          th run test
       tbody
         each dlTest, index in dlTests
           tr
             td #{dlTest.desc}
-            td #{dlTest.expect}
+            td #{dlTest.expectdl}
             td
               button(
                 type='button'
@@ -23,7 +26,7 @@ html
               )
     for dlTest, index in dlTests
       if dlTest.sandbox
-        if dlTest.allow
+        if dlTest.allowdl
           iframe(id='if'+index, sandbox="allow-downloads" width=0 height=0)
         else
           iframe(id='if'+index, sandbox="" width=0 height=0)
