@@ -23,4 +23,12 @@
   "url": "EXTORIGIN/staticcsp/WhoIs.zip",
   "expectdl": true,
   "sandbox": true,
-  "allowdl": true}]
+  "allowdl": true},
+ {"desc": "Unsandboxed iframe of page that simulates click on <a download>",
+  "url": "EXTORIGIN/static/anchor_download.html",
+  "expectdl": true,
+  "sandbox": false},
+ {"desc": "Sandboxed iframe of page that simulates click on <a download>",
+  "url": "EXTORIGIN/static/anchor_download.html",
+  "expectdl": false,
+  "sandbox": true}]

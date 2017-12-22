@@ -27,9 +27,9 @@ html
     for dlTest, index in dlTests
       if dlTest.sandbox
         if dlTest.allowdl
-          iframe(id='if'+index, sandbox="allow-downloads" width=0 height=0)
+          iframe(id='if'+index, sandbox="allow-scripts allow-downloads" width=0 height=0)
         else
-          iframe(id='if'+index, sandbox="" width=0 height=0)
+          iframe(id='if'+index, sandbox="allow-scripts" width=0 height=0)
       else
         iframe(id='if'+index width=0 height=0)
     script(src='static/dltest.js')
