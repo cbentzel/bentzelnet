@@ -1,0 +1,6 @@
+# Configuration for netlify
+
+[build]
+  # The root of the jekyll package is not at the top level
+  base = "gatsnet/"
+  command = "gatsby build"
