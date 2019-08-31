@@ -1,6 +1,10 @@
 bentzelnet
 ==========
 
-AppEngine services running bentzel.net. I expect that this will mainly be for
-testing web technologies and nothing full fledged. Will need support for
-multiple domains.
+A revived attempt at bringing bentzel.net back from the dead.
+
+Planning to do it via:
+  * SSG toolchain such as gatsby
+  * Hosting at Netlify or other location
+
+Re-focused on just getting it up and running.
