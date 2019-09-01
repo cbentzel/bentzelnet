@@ -5,3 +5,8 @@
   base = "/"
   command = "gatsby build"
   publish = "public/"
+
+# Redirect internal domain to public domain
+[[redirects]]
+  from = "https://hungry-hopper-76f2b6.netlify.com/*"
+  to = "https://chris.bentzel.net:splat"
