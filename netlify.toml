@@ -4,4 +4,4 @@
   # The root of the gatsby package is at the top level
   base = "/"
   command = "gatsby build"
-  publish = "/"
+  publish = "public/"
