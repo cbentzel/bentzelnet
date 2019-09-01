@@ -8,5 +8,5 @@
 
 # Redirect internal domain to public domain
 [[redirects]]
-  from = "https://hungry-hopper-76f2b6.netlify.com/*"
-  to = "https://chris.bentzel.net:splat"
+  from = "http://hungry-hopper-76f2b6.netlify.com/*"
+  to = "http://chris.bentzel.net:splat"
